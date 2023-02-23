@@ -1,0 +1,34 @@
+<html>
+<head>
+<script type="text/javascript">
+function f()
+{
+var x=document.f1.t1.value;
+var y=document.f1.t2.value;
+var z=document.f1.t3.value;
+var ph=document.f1.t4.value;
+if(x==""||y==""||z==""||ph=="")
+alert("All fields are required");
+else if(y==" "||y=="null")
+alert("Please enter password");
+else if(y!=z)
+alert("Password do no match");
+else if(ph.length!=10)
+alert("Not a valid phone number");
+else
+alert("Success");
+}
+</script>
+</head>
+<body bgcolor="gray">
+<form name=f1 onsubmit='return f()'>
+Username <input type="text" name="t1"><br>
+Password <input type="password" name="t2"><br>
+Confirm password <input type="password" name="t3"><br>
+Phone Number <input type="text" name="t4"><br>
+<input type="submit" name="submit" value="submit">
+<input type="reset" name="reset" value="clear">
+</form>
+</body>
+</html>
+

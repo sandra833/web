@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function validate()
+        {
+           if(document.myForm.Name.value=="")
+             {
+                alert("Please provide your name!!");
+                document.myForm.Name.focus();
+                return false;
+             }
+         var x=document.myForm.Email.value;  
+         var at=x.indexOf("@");  
+         var dot=x.lastIndexOf(".");
+           if(x=="" || at<1 || dot<at+2)
+             {
+                alert("Please provide your email!!");
+                document.myForm.Email.focus();
+                return false;
+             }
+           if(document.myForm.Pin.value=="" || isNaN(document.myForm.Pin.value) || (document.myForm.Pin.value.length!=6))
+             {
+               alert("Please provide a valid Pin code");
+               document.myForm.Pin.focus();
+               return false;  
+             }
+           if(document.myForm.State.value=="")
+             {
+               alert("Enter your state!!");
+               document.myForm.State.focus();
+               return false;
+             }
+           return (alert("Submitted"));
+        }
+    </script>
+  </head>
+  <body>
+    <form name="myForm">
+       <table align="center" cellpadding="5x">
+          <tr>
+            <td>Name</td><td><input type="text" name="Name"></td>
+          </tr>
+          <tr>
+            <td>E-mail</td><td><input type="text" name="Email"></td>
+          </tr>
+          <tr>
+            <td>Pin code</td><td><input type="number" name="Pin"></td>
+          </tr>
+          <tr>
+            <td>State</td>
+            <td>
+               <select name="State">
+                  <option>Select a state</option>
+                  <option>Kerala</option>
+                  <option>Tamilnadu</option>
+                  <option>Karnataka</option>
+                  <option>Goa</option>
+               </select>
+            </td>  
+          </tr>
+          <tr>
+            <td><input type="button" value="Submit" onclick="validate()"></td>
+          </tr>
+          <tr>
+       </table>
+    </form>
+  </body>
+</html>

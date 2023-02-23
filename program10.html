@@ -1,0 +1,133 @@
+<html>
+
+<head>
+
+<script type="text/javascript">
+
+function validate()
+
+{
+
+if(document.myForm.Name.value=="")
+
+{
+
+alert("Please provide your name!!!");
+
+document.myForm.Name.focus();
+
+return false;
+
+}
+
+if(document.myForm.Email.value=="")
+
+{
+
+alert("Please provide your email!!!");
+
+document.myForm.Email.focus();
+
+return false;
+
+}
+
+if(document.myForm.Zip.value==""||isNaN(document.myForm.Zip.value)||document.myForm.Zip.value.length!=5)
+
+{
+
+alert("Please provide a Zip in format #####");
+
+document.myForm.Zip.focus();
+
+return false;
+
+}
+
+if(document.myForm.Country.value=="")
+
+{
+
+alert("Please provide your country!!!");
+
+document.myForm.Country.focus();
+
+return false;
+
+}
+
+return(alert("submitted"));
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+
+<form name="myForm">
+
+<table align="center" cellpadding="5x">
+
+<tr>
+
+<td>Name : </td>
+
+<td><input type="text" name="Name"></td>
+
+</tr>
+
+<tr>
+
+<td>Email : </td>
+
+<td><input type="text" name="Email"></td>
+
+</tr>
+
+<tr>
+
+<td>Zip : </td>
+
+<td><input type="text" name="Zip"></td>
+
+</tr>
+
+<tr>
+
+<td>Country</td>
+
+<td>
+
+<select name="Country">
+
+<option>India</option>
+
+<option>China</option>
+
+<option>Russia</option>
+
+
+</select>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td><input type="button" value="Submit" onclick="validate()"></td>
+
+</tr>
+
+</table>
+
+</form>
+
+</body>
+
+
+</html>
+
